@@ -1,0 +1,37 @@
+<!-- application/views/scripts/guestbook/index.phtml -->
+
+<p><a href="<?php echo $this->url(
+    array(
+        'controller' => 'users',
+	'action'     => 'joint'
+    ), 
+    'default', 
+    true) ?>">Create your profile</a></p>
+
+<?php echo $this->url(
+    array(
+        'controller' => 'users',
+    ), 
+    'default', 
+    true)?>
+
+Guestbook Entries: <br />
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+    <dt><?php echo $this->escape($entry->idUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->statusUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->emailUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->pwdUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->ftnameUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->ltnameUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->nickUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->dobUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->phoneUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->cityUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->addressUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->zipUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->createdUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->updatedUsr) ?></dt>
+    <dt><?php echo $this->escape($entry->lastUsr) ?></dt>
+    <?php endforeach ?>
+</dl>

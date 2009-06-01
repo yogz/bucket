@@ -1,0 +1,25 @@
+<?php 
+// application/layouts/scripts/layout.phtml
+
+echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>NotreProjet</title>
+  <?php echo $this->headLink()->appendStylesheet('/css/global.css') ?>
+</head> 
+<body>
+
+<?php echo $this->layout()->content ?>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2197953-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
